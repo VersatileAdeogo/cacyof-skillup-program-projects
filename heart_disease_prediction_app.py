@@ -4,6 +4,11 @@ import pickle
 import numpy as np
 import pandas as pd
 
+import subprocess
+import sys
+def install (package):
+    subprocess.check_call([sys.executable, "-r", "pip", "install", sklearn])
+
 # Load the saved model
 filename = 'project_heart_disease_prediction_model.pkl'
 loaded_model = pickle.load(open(filename, 'rb'))
