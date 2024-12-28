@@ -7,7 +7,7 @@ import pandas as pd
 import subprocess
 import sys
 def install (package):
-    subprocess.check_call([sys.executable, "-r", "pip", "install", sklearn])
+    subprocess.check_call([sys.executable, "-r", "pip", "install", "sklearn"])
 
 # Load the saved model
 filename = 'project_heart_disease_prediction_model.pkl'
