@@ -4,6 +4,11 @@ import pandas as pd
 import pickle
 import numpy as np
 
+import subprocess
+import sys
+def install (package):
+    subprocess.check_call([sys.executable, "-r", "pip", "install", "scikit-learn"])
+
 # Load the saved model
 filename = 'project_medical_insurance_prediction_model.pkl'
 loaded_model = pickle.load(open(filename, 'rb'))
