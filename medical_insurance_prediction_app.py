@@ -55,7 +55,8 @@ elif selected_region == 'South West':
 st.header('Get Prediction')
 if st.button("Medical Insurance Prediction"):
     prediction = mi_prediction(age, bmi, children, sex_n, smoker_n, region_n)
-    st.success(f'The prediction is {prediction[0]}')
+    round_pred = "$" + str(round(prediction[0], 2))
+    st.success(f'The prediction is {round_pred}')
     
     
     
